@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="day">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carros Elétricos &amp; Sustentabilidade · APS UNIP 2026</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-dot"></span>
+      EV<span style="color:var(--text)">·</span>APS
+    </a>
+    <ul id="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#funcionamento">Funcionamento</a></li>
+      <li><a href="#vantagens">Vantagens</a></li>
+      <li><a href="#desafios">Desafios</a></li>
+      <li><a href="#sustentabilidade">Sustentabilidade</a></li>
+      <li><a href="#projeto">Projeto</a></li>
+      <li><a href="#conclusao">Conclusão</a></li>
+      <li><a href="#referencias">Referências</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:0.8rem;">
+      <div class="theme-switch" onclick="toggleTheme()" role="button" aria-label="Alternar tema" tabindex="0">
+        <svg class="switch-icon switch-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="4"/>
+          <line x1="12" y1="2" x2="12" y2="5"/>
+          <line x1="12" y1="19" x2="12" y2="22"/>
+          <line x1="2" y1="12" x2="5" y2="12"/>
+          <line x1="19" y1="12" x2="22" y2="12"/>
+          <line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/>
+          <line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/>
+          <line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/>
+          <line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/>
+        </svg>
+        <div class="switch-track">
+          <div class="switch-thumb" id="switch-thumb"></div>
+        </div>
+        <svg class="switch-icon switch-moon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+        </svg>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#sobre" onclick="closeMenu()">Sobre</a>
+    <a href="#funcionamento" onclick="closeMenu()">Funcionamento</a>
+    <a href="#vantagens" onclick="closeMenu()">Vantagens</a>
+    <a href="#desafios" onclick="closeMenu()">Desafios</a>
+    <a href="#sustentabilidade" onclick="closeMenu()">Sustentabilidade</a>
+    <a href="#projeto" onclick="closeMenu()">Projeto</a>
+    <a href="#conclusao" onclick="closeMenu()">Conclusão</a>
+    <a href="#referencias" onclick="closeMenu()">Referências</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow reveal">⚡ APS · UNIP · Ciência da Computação · 2026</div>
+    <h1 class="hero-title reveal reveal-delay-1">
+      Carros<br><span class="hl">Elétricos</span><br>&amp; Sustentabilidade
+    </h1>
+    <p class="hero-sub reveal reveal-delay-2">
+      Uma análise completa sobre o funcionamento, vantagens, desafios e o papel dos veículos elétricos (EV) no desenvolvimento sustentável e na mobilidade do futuro.
+    </p>
+    <div class="hero-cta-group reveal reveal-delay-3">
+      <a href="#sobre" class="btn-primary">⚡ Explorar</a>
+      <a href="#funcionamento" class="btn-secondary">Ver funcionamento →</a>
+    </div>
+    <div class="hero-stats reveal reveal-delay-4">
+      <div class="stat-item">
+        <div class="stat-value" id="counter1">0</div>
+        <div class="stat-label">% menos CO₂ emitido</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="counter2">0</div>
+        <div class="stat-label">% mais eficiente</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="counter3">0</div>
+        <div class="stat-label">Milhões de EVs no mundo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="section">
+  <div class="section-header reveal">
+    <div class="section-num">01</div>
+    <div class="section-label">Introdução</div>
+    <h2 class="section-title">O que são carros elétricos?</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text reveal reveal-delay-1">
+      <p>
+        A crescente preocupação com o meio ambiente e os impactos causados pelas atividades humanas tem impulsionado o desenvolvimento de novas tecnologias voltadas à sustentabilidade. Entre os principais fatores que contribuem para a degradação ambiental, destaca-se a emissão de gases poluentes provenientes da queima de combustíveis fósseis, amplamente utilizados em veículos automotores.
+      </p>
+      <p>
+        Os carros elétricos surgem como uma alternativa relevante para a redução desses impactos, uma vez que utilizam energia elétrica em substituição aos combustíveis tradicionais, diminuindo significativamente a emissão de gases poluentes. Além disso, essa tecnologia representa um avanço importante no setor de mobilidade urbana, promovendo inovação e maior eficiência energética.
+      </p>
+      <p>
+        Este trabalho tem como objetivo analisar o funcionamento dos carros elétricos, seus principais benefícios e desafios, bem como seu papel no desenvolvimento sustentável. Busca-se compreender como essa tecnologia pode contribuir para a redução dos impactos ambientais e quais são as perspectivas para sua expansão no futuro.
+      </p>
+      <div class="keywords">
+        <span class="kw-tag">Sustentabilidade</span>
+        <span class="kw-tag">Carros Elétricos</span>
+        <span class="kw-tag">Meio Ambiente</span>
+        <span class="kw-tag">Tecnologia</span>
+        <span class="kw-tag">Mobilidade Urbana</span>
+        <span class="kw-tag">XHTML/CSS</span>
+      </div>
+    </div>
+    <div class="about-img reveal reveal-delay-2">
+      <img
+        src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80"
+        alt="Carro elétrico moderno"
+        title="Veículo Elétrico"
+      >
+    </div>
+  </div>
+</section>
+
+<!-- FUNCIONAMENTO -->
+<section id="funcionamento">
+  <div class="func-inner">
+    <div class="section-header reveal">
+      <div class="section-num">02</div>
+      <div class="section-label">Como funciona</div>
+      <h2 class="section-title">Tecnologia &amp; Funcionamento</h2>
+      <p class="section-desc">
+        Os carros elétricos utilizam motores elétricos alimentados por baterias recarregáveis. Diferentemente dos veículos a combustão, não há queima de combustível — a energia elétrica é convertida diretamente em movimento com muito mais eficiência.
+      </p>
+    </div>
+
+    <div class="diff-wrapper reveal">
+      <div class="diff-col ev">
+        <h3>⚡ Veículo Elétrico (EV)</h3>
+        <ul class="diff-list">
+          <li><span class="bullet">✓</span> Motor elétrico — eficiência de 85–95%</li>
+          <li><span class="bullet">✓</span> Bateria de lítio recarregável (Li-ion)</li>
+          <li><span class="bullet">✓</span> Zero emissão de gases no escapamento</li>
+          <li><span class="bullet">✓</span> Frenagem regenerativa recupera energia</li>
+          <li><span class="bullet">✓</span> Baixíssima manutenção (sem óleo, filtros)</li>
+          <li><span class="bullet">✓</span> Funcionamento silencioso</li>
+          <li><span class="bullet">✓</span> Torque máximo instantâneo</li>
+          <li><span class="bullet">✓</span> Custo de abastecimento muito inferior</li>
+        </ul>
+      </div>
+      <div class="diff-col ice">
+        <h3>🔥 Veículo a Combustão (ICE)</h3>
+        <ul class="diff-list">
+          <li><span class="bullet">✗</span> Motor a combustão interna — eficiência 20–40%</li>
+          <li><span class="bullet">✗</span> Depende de gasolina, etanol ou diesel</li>
+          <li><span class="bullet">✗</span> Emite CO₂, NOx e partículas finas</li>
+          <li><span class="bullet">✗</span> Freios convencionais — energia dissipada em calor</li>
+          <li><span class="bullet">✗</span> Manutenção frequente (óleo, filtros, correia)</li>
+          <li><span class="bullet">✗</span> Ruído do motor e escapamento</li>
+          <li><span class="bullet">✗</span> Torque cresce gradualmente com rotação</li>
+          <li><span class="bullet">✗</span> Preço do combustível sujeito a variações</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-header reveal" style="margin-top:3rem; margin-bottom:1.5rem;">
+      <div class="section-label">Componentes</div>
+      <h3 class="section-title" style="font-size:1.6rem;">Peças principais de um EV</h3>
+    </div>
+    <div class="func-parts-grid reveal">
+      <div class="part-card">
+        <span class="part-icon">🔋</span>
+        <h4>Bateria (Pack Li-ion)</h4>
+        <p>Armazena a energia elétrica. As baterias de íon-lítio são as mais usadas por sua alta densidade energética. Um pack típico de EV varia entre 40 e 100 kWh.</p>
+      </div>
+      <div class="part-card">
+        <span class="part-icon">⚙️</span>
+        <h4>Motor Elétrico</h4>
+        <p>Converte energia elétrica em movimento mecânico com eficiência acima de 90%. Pode ser de corrente alternada (AC) ou corrente contínua (DC).</p>
+      </div>
+      <div class="part-card">
+        <span class="part-icon">🔌</span>
+        <h4>Controlador (Inversor)</h4>
+        <p>Gerencia o fluxo de energia entre a bateria e o motor, convertendo DC para AC e controlando a potência entregue ao motor conforme o pedal.</p>
+      </div>
+      <div class="part-card">
+        <span class="part-icon">🔄</span>
+        <h4>Frenagem Regenerativa</h4>
+        <p>Ao desacelerar, o motor funciona como gerador, convertendo energia cinética em elétrica e devolvendo-a à bateria, aumentando a autonomia.</p>
+      </div>
+      <div class="part-card">
+        <span class="part-icon">🌡️</span>
+        <h4>Sistema Térmico</h4>
+        <p>Gerencia a temperatura da bateria e do motor, mantendo-os na faixa ideal de operação. Fundamental para a durabilidade e desempenho da bateria.</p>
+      </div>
+      <div class="part-card">
+        <span class="part-icon">🏠</span>
+        <h4>EVSE (Carregador)</h4>
+        <p>Estação de recarga que fornece energia ao veículo. Carregadores rápidos em corrente contínua (DC) podem recarregar até 80% da bateria em 20–40 minutos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VANTAGENS -->
+<section id="vantagens" class="section alt-bg">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-num">03</div>
+      <div class="section-label">Benefícios</div>
+      <h2 class="section-title">Vantagens dos Carros Elétricos</h2>
+      <p class="section-desc">
+        Entre as principais vantagens dos carros elétricos destaca-se a redução da emissão de gases poluentes, contribuindo diretamente para a melhoria da qualidade do ar e para a diminuição do efeito estufa.
+      </p>
+    </div>
+    <div class="vantagens-grid">
+      <div class="van-card reveal reveal-delay-1">
+        <span class="van-icon">🌱</span>
+        <h3>Zero Emissão Local</h3>
+        <p>Não emitem CO₂, CO, NOx nem partículas finas durante o uso. Contribuem diretamente para a melhoria da qualidade do ar nas cidades e redução do efeito estufa.</p>
+      </div>
+      <div class="van-card reveal reveal-delay-2">
+        <span class="van-icon">💰</span>
+        <h3>Economia a Longo Prazo</h3>
+        <p>O custo da energia elétrica tende a ser muito inferior ao dos combustíveis fósseis. Combinado com menor manutenção, gera economia significativa ao longo dos anos.</p>
+      </div>
+      <div class="van-card reveal reveal-delay-3">
+        <span class="van-icon">🔧</span>
+        <h3>Menor Manutenção</h3>
+        <p>Motores elétricos possuem menos componentes sujeitos a desgaste. Não há troca de óleo, filtros de combustível, velas de ignição ou correia dentada.</p>
+      </div>
+      <div class="van-card reveal reveal-delay-4">
+        <span class="van-icon">🔇</span>
+        <h3>Funcionamento Silencioso</h3>
+        <p>O baixo nível de ruído melhora o conforto nas áreas urbanas, reduzindo significativamente a poluição sonora nas cidades.</p>
+      </div>
+      <div class="van-card reveal reveal-delay-1">
+        <span class="van-icon">⚡</span>
+        <h3>Alta Eficiência Energética</h3>
+        <p>Motores elétricos convertem 85–95% da energia em movimento. Comparado aos 20–40% dos motores a combustão, a diferença de eficiência é expressiva.</p>
+      </div>
+      <div class="van-card reveal reveal-delay-2">
+        <span class="van-icon">🚀</span>
+        <h3>Desempenho Superior</h3>
+        <p>O torque máximo está disponível imediatamente, proporcionando aceleração instantânea e responsiva desde velocidades baixas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESAFIOS -->
+<section id="desafios" class="section">
+  <div class="section-header reveal">
+    <div class="section-num">04</div>
+    <div class="section-label">Limitações</div>
+    <h2 class="section-title">Desafios &amp; Barreiras</h2>
+    <p class="section-desc">
+      Apesar das vantagens, os carros elétricos ainda enfrentam desafios para sua ampla adoção. Conhecer essas barreiras é fundamental para traçar soluções e acelerar a transição energética.
+    </p>
+  </div>
+  <div class="desafios-layout">
+    <div class="desafio-list reveal">
+      <div class="desafio-item active" onclick="selectDesafio(this)">
+        <div class="desafio-num">01</div>
+        <div class="desafio-text">
+          <h4>Alto Custo Inicial</h4>
+          <p>O preço de aquisição ainda é superior ao dos veículos convencionais, principalmente pelo custo das baterias de lítio, limitando o acesso da população a essa tecnologia.</p>
+        </div>
+      </div>
+      <div class="desafio-item" onclick="selectDesafio(this)">
+        <div class="desafio-num">02</div>
+        <div class="desafio-text">
+          <h4>Infraestrutura de Recarga</h4>
+          <p>A rede de postos de recarga ainda é insuficiente em muitas regiões, especialmente no Brasil, dificultando o uso cotidiano em longas distâncias.</p>
+        </div>
+      </div>
+      <div class="desafio-item" onclick="selectDesafio(this)">
+        <div class="desafio-num">03</div>
+        <div class="desafio-text">
+          <h4>Tempo de Recarga</h4>
+          <p>Mesmo com carregadores rápidos, o tempo de recarga é superior ao de um abastecimento convencional, o que pode ser um obstáculo em viagens longas.</p>
+        </div>
+      </div>
+      <div class="desafio-item" onclick="selectDesafio(this)">
+        <div class="desafio-num">04</div>
+        <div class="desafio-text">
+          <h4>Impacto das Baterias</h4>
+          <p>A produção das baterias de lítio exige mineração intensiva de cobalto, níquel e lítio, gerando impactos ambientais. O descarte adequado também é um desafio crescente.</p>
+        </div>
+      </div>
+    </div>
+    <div class="desafio-visual reveal reveal-delay-2">
+      <img
+        id="desafio-img"
+        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+        alt="Desafio selecionado"
+      >
+    </div>
+  </div>
+</section>
+
+<!-- SUSTENTABILIDADE -->
+<section id="sustentabilidade" class="section alt-bg">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-num">05</div>
+      <div class="section-label">Impacto Ambiental</div>
+      <h2 class="section-title">Sustentabilidade &amp; Meio Ambiente</h2>
+      <p class="section-desc">
+        Os carros elétricos desempenham um papel importante na promoção do desenvolvimento sustentável. Quando a energia provém de fontes renováveis, os benefícios ambientais são amplificados significativamente.
+      </p>
+    </div>
+    <div class="sustent-grid reveal">
+      <div class="sustent-card">
+        <img
+          class="sustent-img"
+          src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80"
+          alt="Energia Solar"
+        >
+        <div class="sustent-body">
+          <h3>⚡ Energia Renovável</h3>
+          <p>Quando o EV é carregado com energia proveniente de fontes renováveis (solar, eólica, hidrelétrica), sua pegada de carbono se aproxima de zero, tornando-o verdadeiramente sustentável ao longo de todo o ciclo de vida.</p>
+        </div>
+      </div>
+      <div class="sustent-card">
+        <img
+          class="sustent-img"
+          src="https://images.unsplash.com/photo-1464013778555-8e723c2f01f8?w=600&q=80"
+          alt="Cidades limpas"
+        >
+        <div class="sustent-body">
+          <h3>🏙️ Qualidade do Ar Urbano</h3>
+          <p>A substituição de frotas urbanas por veículos elétricos reduz drasticamente a emissão de CO₂ e NOx nas cidades, melhorando a qualidade do ar e reduzindo doenças respiratórias causadas pela poluição.</p>
+        </div>
+      </div>
+      <div class="sustent-card">
+        <img
+          class="sustent-img"
+          src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&q=80"
+          alt="Reciclagem de baterias"
+        >
+        <div class="sustent-body">
+          <h3>♻️ Ciclo de Vida da Bateria</h3>
+          <p>É necessário considerar todo o ciclo de vida do veículo, incluindo a fabricação das baterias e sua reciclagem. Programas de segunda vida (reuso em armazenamento estacionário) e reciclagem avançada reduzem o impacto.</p>
+        </div>
+      </div>
+      <div class="sustent-card">
+        <img
+          class="sustent-img"
+          src="https://images.unsplash.com/photo-1548337138-e87d889cc369?w=600&q=80"
+          alt="Futuro sustentável"
+        >
+        <div class="sustent-body">
+          <h3>🌍 Desenvolvimento Sustentável</h3>
+          <p>Quando a energia utilizada provém de fontes renováveis, os carros elétricos podem ser considerados uma solução eficaz para a mobilidade sustentável, alinhada aos Objetivos de Desenvolvimento Sustentável da ONU (ODS).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETO -->
+<section id="projeto" class="section">
+  <div class="section-header reveal">
+    <div class="section-num">06</div>
+    <div class="section-label">Projeto</div>
+    <h2 class="section-title">Estrutura do Site</h2>
+    <p class="section-desc">
+      O site foi desenvolvido utilizando XHTML e CSS, garantindo organização estrutural, padronização visual e navegação simples para o usuário.
+    </p>
+  </div>
+
+  <div class="site-tabs reveal">
+    <button class="tab-btn active" onclick="switchTab(this, 'tab-pages')">Páginas</button>
+    <button class="tab-btn" onclick="switchTab(this, 'tab-tech')">Tecnologias</button>
+    <button class="tab-btn" onclick="switchTab(this, 'tab-testes')">Testes</button>
+  </div>
+
+  <div id="tab-pages" class="tab-panel active reveal">
+    <div class="site-pages-grid">
+      <div class="site-page-card">
+        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&q=80" alt="Página Inicial">
+        <div class="site-page-body">
+          <h4>index.html</h4>
+          <p>Apresenta o tema e todo seu conteúdo dividido em seções. Este é o esqueleto da página e suas funcionalidades.</p>
+        </div>
+      </div>
+      <div class="site-page-card">
+        <img src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?w=400&q=80" alt="Estilos CSS">
+        <div class="site-page-body">
+          <h4>styles.css</h4>
+          <p>Contém todos os estilos da página: cores, efeitos, temas claro e escuro, responsividade e animações.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-tech" class="tab-panel reveal">
+    <p style="color:var(--text-muted);margin-bottom:1.5rem;font-size:0.95rem;">
+      O desenvolvimento foi realizado utilizando tecnologias web padrão, sem dependências de frameworks externos, garantindo compatibilidade e leveza.
+    </p>
+    <div class="tech-stack">
+      <div class="tech-item"><span class="tech-dot"></span>XHTML 1.0 Transitional</div>
+      <div class="tech-item"><span class="tech-dot"></span>CSS 2.1 / CSS3</div>
+      <div class="tech-item"><span class="tech-dot" style="background:#f7df1e;"></span>JavaScript ES6+</div>
+      <div class="tech-item"><span class="tech-dot" style="background:#ff8c00;"></span>Google Fonts</div>
+      <div class="tech-item"><span class="tech-dot" style="background:#34a853;"></span>Design Responsivo</div>
+      <div class="tech-item"><span class="tech-dot" style="background:#ea4335;"></span>Scroll Reveal Animations</div>
+      <div class="tech-item"><span class="tech-dot" style="background:#9c27b0;"></span>Modo Claro/Escuro</div>
+    </div>
+  </div>
+
+  <div id="tab-testes" class="tab-panel reveal">
+    <p style="color:var(--text-muted);margin-bottom:1.5rem;font-size:0.95rem;">
+      Foram realizados testes para verificar o funcionamento do site, incluindo navegação entre seções, carregamento de conteúdos e compatibilidade com diferentes navegadores.
+    </p>
+    <div class="desafio-list" style="max-width:600px;">
+      <div class="desafio-item active">
+        <div class="desafio-num" style="font-size:1rem;">✓</div>
+        <div class="desafio-text">
+          <h4>Compatibilidade Cross-Browser</h4>
+          <p>Testado em Chrome, Firefox, Safari e Edge. Todas as seções renderizadas corretamente.</p>
+        </div>
+      </div>
+      <div class="desafio-item active">
+        <div class="desafio-num" style="font-size:1rem;">✓</div>
+        <div class="desafio-text">
+          <h4>Responsividade Mobile</h4>
+          <p>Layout adaptado para dispositivos móveis (smartphones e tablets), com menu hamburguer funcional.</p>
+        </div>
+      </div>
+      <div class="desafio-item active">
+        <div class="desafio-num" style="font-size:1rem;">✓</div>
+        <div class="desafio-text">
+          <h4>Navegação entre Seções</h4>
+          <p>Todos os links internos testados e funcionando. Navegação fluida com scroll suave e navbar inteligente.</p>
+        </div>
+      </div>
+      <div class="desafio-item active">
+        <div class="desafio-num" style="font-size:1rem;">✓</div>
+        <div class="desafio-text">
+          <h4>Toggle Modo Claro/Escuro</h4>
+          <p>Alternância de tema funcionando em todas as seções, com preferência salva no localStorage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCLUSÃO -->
+<section id="conclusao" class="section alt-bg">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-num">07</div>
+      <div class="section-label">Considerações Finais</div>
+      <h2 class="section-title">Conclusão</h2>
+    </div>
+    <div class="conclusao-layout">
+      <div class="conclusao-text reveal reveal-delay-1">
+        <p>
+          O estudo dos carros elétricos evidencia a importância dessa tecnologia no contexto atual de busca por soluções sustentáveis. A substituição de veículos movidos a combustíveis fósseis por alternativas elétricas pode contribuir significativamente para a redução dos impactos ambientais, especialmente em relação à emissão de gases poluentes.
+        </p>
+        <p>
+          Apesar dos desafios existentes, como o custo elevado e a necessidade de expansão da infraestrutura de recarga, observa-se um avanço contínuo nessa área, impulsionado pela inovação tecnológica e pela crescente conscientização ambiental.
+        </p>
+        <p>
+          Conclui-se que os carros elétricos representam uma alternativa viável e promissora para a mobilidade sustentável, contribuindo para a preservação do meio ambiente e para a melhoria da qualidade de vida nas cidades. O futuro da mobilidade é elétrico.
+        </p>
+        <p style="margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--border);">
+          <strong>Interdisciplinaridade:</strong> Este trabalho envolveu conhecimentos de Programação Web (XHTML/CSS), Computação (lógica, estrutura de dados), Meio Ambiente (sustentabilidade, ciclo de carbono) e Engenharia (funcionamento de motores e baterias), demonstrando a amplitude do curso de Ciência da Computação.
+        </p>
+      </div>
+      <div class="conclusao-visual reveal reveal-delay-2">
+        <div class="metric-bar">
+          <div class="metric-label"><span>Redução de CO₂ em uso</span><span>~70%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-width="70"></div></div>
+        </div>
+        <div class="metric-bar">
+          <div class="metric-label"><span>Eficiência energética</span><span>90%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
+        </div>
+        <div class="metric-bar">
+          <div class="metric-label"><span>Economia de manutenção</span><span>~60%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-width="60"></div></div>
+        </div>
+        <div class="metric-bar">
+          <div class="metric-label"><span>Crescimento do mercado EV</span><span>~35%/ano</span></div>
+          <div class="bar-track"><div class="bar-fill" data-width="35"></div></div>
+        </div>
+        <div class="metric-bar">
+          <div class="metric-label"><span>Penetração global (2024)</span><span>~18%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-width="18"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERÊNCIAS -->
+<section id="referencias" class="section">
+  <div class="section-header reveal">
+    <div class="section-num">08</div>
+    <div class="section-label">Fontes</div>
+    <h2 class="section-title">Referências Bibliográficas</h2>
+  </div>
+  <div class="ref-list reveal">
+    <div class="ref-item">
+      EPE – EMPRESA DE PESQUISA ENERGÉTICA. <em>Veículos elétricos.</em> Disponível em: <a href="https://www.epe.gov.br" target="_blank">https://www.epe.gov.br</a>. Acesso em: 2026.
+    </div>
+    <div class="ref-item">
+      MINISTÉRIO DO MEIO AMBIENTE. <em>Sustentabilidade e mobilidade urbana.</em> Disponível em: <a href="https://www.gov.br/mma" target="_blank">https://www.gov.br/mma</a>. Acesso em: 2026.
+    </div>
+    <div class="ref-item">
+      TESLA. <em>Tecnologia de veículos elétricos.</em> Disponível em: <a href="https://www.tesla.com" target="_blank">https://www.tesla.com</a>. Acesso em: 2026.
+    </div>
+    <div class="ref-item">
+      UOL. <em>Carros elétricos: vantagens e desvantagens.</em> Disponível em: <a href="https://www.uol.com.br" target="_blank">https://www.uol.com.br</a>. Acesso em: 2026.
+    </div>
+    <div class="ref-item">
+      UNIP – UNIVERSIDADE PAULISTA. <em>Guia de Normalização ABNT.</em> Disponível em: <a href="https://www.unip.br/servicos/biblioteca/assets/download/manual_de_normalizacao_abnt_2023.pdf" target="_blank">unip.br</a>. Acesso em: 2026.
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-info">
+      <div class="footer-brand">⚡ EV · APS UNIP 2026</div>
+      <p>Carros Elétricos &amp; Desenvolvimento Sustentável<br>
+      Ciência da Computação · 8º Semestre · UNIP · Jundiaí</p>
+      <p class="footer-names">João Zanatta · Lucas Melo · Pedro Lima</p>
+    </div>
+    <a class="footer-github" href="https://github.com/jzanatta/APS-CarrosEletricos.git" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+      GitHub do Projeto
+    </a>
+  </div>
+  <p class="footer-copy">&copy; 2026 APS – Atividades Práticas Supervisionadas · UNIP · Ciência da Computação</p>
+</footer>
+
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Voltar ao topo">↑</button>
+
+<!-- JAVASCRIPT -->
+<script>
+var saved = localStorage.getItem('ev-theme') || 'night';
+applyTheme(saved);
+
+function toggleTheme() {
+  var cur = document.documentElement.getAttribute('data-theme');
+  applyTheme(cur === 'day' ? 'night' : 'day');
+}
+function applyTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  var thumb = document.getElementById('switch-thumb');
+  if (thumb) thumb.classList.toggle('active', t === 'night');
+  localStorage.setItem('ev-theme', t);
+}
+
+var lastScrollY = 0;
+var navbar = document.getElementById('navbar');
+window.addEventListener('scroll', function () {
+  var cur = window.scrollY;
+  navbar.classList.toggle('hidden', cur > lastScrollY && cur > 120);
+  lastScrollY = cur;
+  document.getElementById('back-top').classList.toggle('visible', cur > 500);
+});
+
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('mobile-menu').classList.remove('open');
+}
+
+var revealEls = document.querySelectorAll('.reveal');
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(function(el) { observer.observe(el); });
+
+function animateCounter(id, target, suffix) {
+  var el = document.getElementById(id);
+  var start = 0;
+  var step = Math.ceil(target / (2000 / 16));
+  var timer = setInterval(function () {
+    start = Math.min(start + step, target);
+    el.textContent = start + (suffix || '');
+    if (start >= target) clearInterval(timer);
+  }, 16);
+}
+var countersDone = false;
+var counterObserver = new IntersectionObserver(function(entries) {
+  if (entries[0].isIntersecting && !countersDone) {
+    countersDone = true;
+    animateCounter('counter1', 70, '%');
+    animateCounter('counter2', 90, '%');
+    animateCounter('counter3', 40, 'M');
+  }
+}, { threshold: 0.5 });
+counterObserver.observe(document.getElementById('hero'));
+
+var barObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.bar-fill').forEach(function(bar) {
+        bar.style.width = bar.getAttribute('data-width') + '%';
+      });
+      barObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+var conclusao = document.getElementById('conclusao');
+if (conclusao) barObserver.observe(conclusao);
+
+var desafioImgs = [
+  'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+  'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&q=80',
+  'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=600&q=80',
+  'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&q=80'
+];
+var dImg = document.getElementById('desafio-img');
+if (dImg) dImg.style.transition = 'opacity 0.25s';
+
+function selectDesafio(el) {
+  document.querySelectorAll('.desafio-item').forEach(function(d) { d.classList.remove('active'); });
+  el.classList.add('active');
+  var idx = Array.from(el.parentElement.children).indexOf(el);
+  dImg.style.opacity = '0';
+  setTimeout(function() {
+    dImg.src = desafioImgs[idx];
+    dImg.style.opacity = '1';
+  }, 250);
+}
+
+function switchTab(btn, panelId) {
+  document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById(panelId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
