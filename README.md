@@ -16,11 +16,11 @@ O projeto aborda os carros elétricos como solução para a redução de emissõ
 
 ## 👥 Integrantes
 
-| Nome | RA |
-|------|----|
-| João Zanatta | — |
-| Lucas Melo | — |
-| Pedro Lima | — |
+| Nome |
+|------|
+| João Zanatta |
+| Lucas Melo |
+| Pedro Lima |
 
 ---
 
@@ -30,6 +30,7 @@ O projeto aborda os carros elétricos como solução para a redução de emissõ
 /
 ├── index.html       # Estrutura e conteúdo do site (XHTML)
 └── styles.css       # Estilos, temas e responsividade (CSS3)
+└── README.md       # Instruções e breve resumo
 ```
 
 ---
